@@ -1,0 +1,51 @@
+# Arquivos gerados pelo Angular / Build
+######################################
+# Pastas de saída de build: /dist, /tmp, /out-tsc
+dist
+tmp
+out-tsc
+
+# Cache do Angular CLI
+.angular/cache
+
+# Logs de teste e cobertura
+/coverage
+testem.log
+karma.log
+
+
+# Node.js
+######################################
+# Pasta de dependências de todos os projetos
+node_modules
+
+# Logs e bloqueios de pacotes
+npm-debug.log*
+yarn-error.log*
+yarn-debug.log*
+.npm
+.yarn-integrity
+.pnp*
+
+
+# IDEs e Editores
+######################################
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Outras IDEs (IntelliJ, Webstorm, etc.)
+.idea/
+*.iml
+
+
+# Arquivos de Sistema
+######################################
+.DS_Store
+Thumbs.db
+
+# Histórico de arquivos (se seu editor usa)
+.history/
