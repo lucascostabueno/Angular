@@ -1,6 +1,16 @@
+<!-- signals -->
+<div>
+  <button (click)="onSelectUser()" >
+    <img [src]="imagePath()" [alt]="selectedUser().name">
+    <span>{{ selectedUser().name }}</span>
+  </button>
+</div>
+
+<!-- zone.js
 <div>
   <button (click)="onSelectUser()" >
     <img [src]="imagePath" [alt]="selectedUser.name">
     <span>{{ selectedUser.name }}</span>
   </button>
 </div>
+ -->

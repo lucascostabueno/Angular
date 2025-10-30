@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 import { DUMMY_USERS } from '../dummy-users';
 
@@ -11,14 +11,26 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.css',
 })
 export class UserComponent {
-  selectedUser = DUMMY_USERS[randomIndex];
+  // signals
+  selectedUser = signal(DUMMY_USERS[randomIndex]);
 
+  /*  zone.js
+  selectedUser = DUMMY_USERS[randomIndex]; */
+
+  // signals
+  imagePath = computed(() => 'assets/users/' + this.selectedUser().avatar);
+
+  /*   zone.js
   get imagePath() {
     return 'assets/users/' + this.selectedUser.avatar;
-  }
+  } */
 
   onSelectUser() {
     const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-    this.selectedUser = DUMMY_USERS[randomIndex];
+    // signals
+    this.selectedUser.set(DUMMY_USERS[randomIndex]);
+
+    /* zone.js
+    this.selectedUser = DUMMY_USERS[randomIndex]; */
   }
 }
