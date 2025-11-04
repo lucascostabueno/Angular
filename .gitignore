@@ -6,7 +6,7 @@ tmp
 out-tsc
 
 # Cache do Angular CLI
-.angular/cache
+**/.angular/
 
 # Logs de teste e cobertura
 /coverage
